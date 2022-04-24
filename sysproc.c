@@ -89,3 +89,16 @@ sys_uptime(void)
   release(&tickslock);
   return xticks;
 }
+ 
+int
+sys_getppid(void)
+{
+	return myproc()->parent->pid;
+
+}
+
+int
+sys_cps(void)
+{
+	return cps ();
+}
